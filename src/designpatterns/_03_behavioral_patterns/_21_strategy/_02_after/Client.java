@@ -17,5 +17,17 @@ public class Client {
                 System.out.println("Red Light");
             }
         });
+
+        blueLightRedLight.blueLight(new Speed() {
+            @Override
+            public void blueLight() {
+                System.out.println("상속된 값이 들어갑니다.");
+            }
+
+            @Override
+            public void redLight() {
+                System.out.println("상속된 값이 들어간 redLight");
+            }
+        });
     }
 }
