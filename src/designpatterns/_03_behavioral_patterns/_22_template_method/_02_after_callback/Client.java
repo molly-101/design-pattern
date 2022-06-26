@@ -10,6 +10,7 @@ public class Client {
                 return result + number;
             }
         });
+        System.out.println();
 
         template.execute(5, (result, number) -> result * number);
     }
