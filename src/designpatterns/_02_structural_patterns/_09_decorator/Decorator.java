@@ -1,4 +1,4 @@
-package designpatterns._02_structural_patterns._13_decorator;
+package designpatterns._02_structural_patterns._09_decorator;
 
 public abstract class Decorator implements Component {
 
