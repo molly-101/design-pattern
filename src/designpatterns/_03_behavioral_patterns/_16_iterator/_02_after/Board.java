@@ -15,4 +15,8 @@ public class Board {
     public Iterator<Post> getRecentPostIterator() {
         return new RecentPostIterator(this);
     }
+
+    public void addPost(Post post) {
+        posts.add(post);
+    }
 }
