@@ -1,23 +1,23 @@
-package designpatterns._03_behavioral_patterns._20_state._02_after;
+package designpatterns._03_behavioral_patterns._20_state._01_before;
 
 public class Client {
 
     public static void main(String[] args) {
-        OnlineCourse onlineCourse = new OnlineCourse();
         Student student = new Student("whiteship");
+        OnlineCourse onlineCourse = new OnlineCourse();
+
         Student keesun = new Student("keesun");
-        keesun.addPrivate(onlineCourse);
+        keesun.addPrivateCourse(onlineCourse);
 
         onlineCourse.addStudent(student);
-
-        onlineCourse.changeState(new Private(onlineCourse));
-
-        onlineCourse.addReview("hello", student);
+        onlineCourse.changeState(OnlineCourse.State.PRIVATE);
 
         onlineCourse.addStudent(keesun);
 
+        onlineCourse.addReview("hello", student);
+
         System.out.println(onlineCourse.getState());
-        System.out.println(onlineCourse.getReviews());
         System.out.println(onlineCourse.getStudents());
+        System.out.println(onlineCourse.getReviews());
     }
 }
